@@ -687,23 +687,23 @@ namespace PrinterSDK {
     {
         // -(int)startMonitor;
         [Export("startMonitor")]
-        int StartMonitor { get; }
+        int StartMonitor ();
 
         // -(int)stopMonitor;
         [Export("stopMonitor")]
-        int StopMonitor { get; }
+        int StopMonitor ();
 
         // -(int)beginTransaction;
         [Export("beginTransaction")]
-        int BeginTransaction { get; }
+        int BeginTransaction ();
 
         // -(int)endTransaction;
         [Export("endTransaction")]
-        int EndTransaction { get; }
+        int EndTransaction ();
 
         // -(int)clearCommandBuffer;
         [Export("clearCommandBuffer")]
-        int ClearCommandBuffer { get; }
+        int ClearCommandBuffer ();
 
         // -(int)addTextAlign:(int)align;
         [Export("addTextAlign:")]
@@ -771,11 +771,11 @@ namespace PrinterSDK {
 
         // -(int)addPageBegin;
         [Export("addPageBegin")]
-        int AddPageBegin { get; }
+        int AddPageBegin ();
 
         // -(int)addPageEnd;
         [Export("addPageEnd")]
-        int AddPageEnd { get; }
+        int AddPageEnd ();
 
         // -(int)addPageArea:(long)x y:(long)y width:(long)width height:(long)height;
         [Export("addPageArea:y:width:height:")]
@@ -815,11 +815,11 @@ namespace PrinterSDK {
 
         // -(int)addRotateBegin;
         [Export("addRotateBegin")]
-        int AddRotateBegin { get; }
+        int AddRotateBegin ();
 
         // -(int)addRotateEnd;
         [Export("addRotateEnd")]
-        int AddRotateEnd { get; }
+        int AddRotateEnd ();
 
         // -(int)addCommand:(NSData *)data;
         [Export("addCommand:")]
@@ -946,11 +946,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2PrinterStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2PrinterStatusInfo Status { get; }
+        Epos2PrinterStatusInfo Status ();
 
         // -(int)sendData:(long)timeout;
         [Export("sendData:")]
@@ -1014,7 +1014,7 @@ namespace PrinterSDK {
 
         // -(long)getInterval;
         [Export("getInterval")]
-        nint Interval { get; }
+        nint Interval ();
 
         // -(void)setConnectionEventDelegate:(id<Epos2ConnectionDelegate>)delegate;
         [Export("setConnectionEventDelegate:")]
@@ -1022,11 +1022,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
 
         // -(int)downloadFirmwareList:(NSString *)printerModel delegate:(id<Epos2FirmwareListDownloadDelegate>)delegate;
         [Export("downloadFirmwareList:delegate:")]
@@ -1168,11 +1168,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2LFCPrinterStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2LFCPrinterStatusInfo Status { get; }
+        Epos2LFCPrinterStatusInfo Status ();
 
         // -(int)sendLFCData:(long)timeout jobNumber:(long)jobNumber;
         [Export("sendLFCData:jobNumber:")]
@@ -1266,11 +1266,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2HybridPrinterStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2HybridPrinterStatusInfo Status { get; }
+        Epos2HybridPrinterStatusInfo Status ();
 
         // -(int)selectPaperType:(int)paperType;
         [Export("selectPaperType:")]
@@ -1286,11 +1286,11 @@ namespace PrinterSDK {
 
         // -(int)cancelInsertion;
         [Export("cancelInsertion")]
-        int CancelInsertion { get; }
+        int CancelInsertion ();
 
         // -(int)ejectPaper;
         [Export("ejectPaper")]
-        int EjectPaper { get; }
+        int EjectPaper ();
 
         // -(int)readMicrData:(int)micrFont timeout:(long)timeout;
         [Export("readMicrData:timeout:")]
@@ -1314,7 +1314,7 @@ namespace PrinterSDK {
 
         // -(int)getPaperType;
         [Export("getPaperType")]
-        int PaperType { get; }
+        int PaperType ();
 
         // -(int)setInterval:(long)interval;
         [Export("setInterval:")]
@@ -1322,7 +1322,7 @@ namespace PrinterSDK {
 
         // -(long)getInterval;
         [Export("getInterval")]
-        nint Interval { get; }
+        nint Interval ();
 
         // -(int)setWaitTime:(long)waitTime;
         [Export("setWaitTime:")]
@@ -1330,7 +1330,7 @@ namespace PrinterSDK {
 
         // -(long)getWaitTime;
         [Export("getWaitTime")]
-        nint WaitTime { get; }
+        nint WaitTime ();
 
         // -(int)setMode40Cpl:(int)mode40Cpl;
         [Export("setMode40Cpl:")]
@@ -1338,7 +1338,7 @@ namespace PrinterSDK {
 
         // -(int)getMode40Cpl;
         [Export("getMode40Cpl")]
-        int Mode40Cpl { get; }
+        int Mode40Cpl ();
 
         // -(void)setConnectionEventDelegate:(id<Epos2ConnectionDelegate>)delegate;
         [Export("setConnectionEventDelegate:")]
@@ -1346,11 +1346,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2DisplayStatusInfo : NSObject
@@ -1380,23 +1380,23 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2DisplayStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2DisplayStatusInfo Status { get; }
+        Epos2DisplayStatusInfo Status ();
 
         // -(int)sendData;
         [Export("sendData")]
-        int SendData { get; }
+        int SendData ();
 
         // -(int)clearCommandBuffer;
         [Export("clearCommandBuffer")]
-        int ClearCommandBuffer { get; }
+        int ClearCommandBuffer ();
 
         // -(int)addInitialize;
         [Export("addInitialize")]
-        int AddInitialize { get; }
+        int AddInitialize ();
 
         // -(int)addCreateWindow:(long)number x:(long)x y:(long)y width:(long)width height:(long)height scrollMode:(int)scrollMode;
         [Export("addCreateWindow:x:y:width:height:scrollMode:")]
@@ -1412,7 +1412,7 @@ namespace PrinterSDK {
 
         // -(int)addClearCurrentWindow;
         [Export("addClearCurrentWindow")]
-        int AddClearCurrentWindow { get; }
+        int AddClearCurrentWindow ();
 
         // -(int)addSetCursorPosition:(long)x y:(long)y;
         [Export("addSetCursorPosition:y:")]
@@ -1476,7 +1476,7 @@ namespace PrinterSDK {
 
         // -(int)addShowClock;
         [Export("addShowClock")]
-        int AddShowClock { get; }
+        int AddShowClock ();
 
         // -(int)addCommand:(NSData *)data;
         [Export("addCommand:")]
@@ -1500,7 +1500,7 @@ namespace PrinterSDK {
 
         // -(int)addStopSlideShow;
         [Export("addStopSlideShow")]
-        int AddStopSlideShow { get; }
+        int AddStopSlideShow ();
 
         // -(int)addSymbol:(NSString *)data type:(int)type level:(int)level width:(long)width height:(long)height dotX:(long)dotX dotY:(long)dotY quietZone:(int)quietZone;
         [Export("addSymbol:type:level:width:height:dotX:dotY:quietZone:")]
@@ -1520,11 +1520,11 @@ namespace PrinterSDK {
 
         // -(int)addClearImage;
         [Export("addClearImage")]
-        int AddClearImage { get; }
+        int AddClearImage ();
 
         // -(int)addClearSymbol;
         [Export("addClearSymbol")]
-        int AddClearSymbol { get; }
+        int AddClearSymbol ();
 
         // -(int)addCreateTextArea:(long)number x:(long)x y:(long)y width:(long)width height:(long)height scrollMode:(int)scrollMode;
         [Export("addCreateTextArea:x:y:width:height:scrollMode:")]
@@ -1540,7 +1540,7 @@ namespace PrinterSDK {
 
         // -(int)addClearCurrentTextArea;
         [Export("addClearCurrentTextArea")]
-        int AddClearCurrentTextArea { get; }
+        int AddClearCurrentTextArea ();
 
         // -(void)setReceiveEventDelegate:(id<Epos2DispReceiveDelegate>)delegate;
         [Export("setReceiveEventDelegate:")]
@@ -1552,11 +1552,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2KeyboardStatusInfo : NSObject
@@ -1582,11 +1582,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2KeyboardStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2KeyboardStatusInfo Status { get; }
+        Epos2KeyboardStatusInfo Status ();
 
         // -(int)setPrefix:(NSData *)data;
         [Export("setPrefix:")]
@@ -1594,7 +1594,7 @@ namespace PrinterSDK {
 
         // -(NSData *)getPrefix;
         [Export("getPrefix")]
-        NSData Prefix { get; }
+        NSData Prefix ();
 
         // -(void)setKeyPressEventDelegate:(id<Epos2KbdKeyPressDelegate>)delegate;
         [Export("setKeyPressEventDelegate:")]
@@ -1610,11 +1610,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2ScannerStatusInfo : NSObject
@@ -1640,11 +1640,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2ScannerStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2ScannerStatusInfo Status { get; }
+        Epos2ScannerStatusInfo Status ();
 
         // -(void)setScanEventDelegate:(id<Epos2ScanDelegate>)delegate;
         [Export("setScanEventDelegate:")]
@@ -1656,11 +1656,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2SimpleSerialStatusInfo : NSObject
@@ -1686,11 +1686,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2SimpleSerialStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2SimpleSerialStatusInfo Status { get; }
+        Epos2SimpleSerialStatusInfo Status ();
 
         // -(int)sendCommand:(NSData *)data;
         [Export("sendCommand:")]
@@ -1706,11 +1706,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2CommBoxStatusInfo : NSObject
@@ -1736,11 +1736,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2CommBoxStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2CommBoxStatusInfo Status { get; }
+        Epos2CommBoxStatusInfo Status ();
 
         // -(int)getCommHistory:(id<Epos2GetCommHistoryDelegate>)delegate;
         [Export("getCommHistory:")]
@@ -1760,11 +1760,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2CashChangerStatusInfo : NSObject
@@ -1790,15 +1790,15 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2CashChangerStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2CashChangerStatusInfo Status { get; }
+        Epos2CashChangerStatusInfo Status ();
 
         // -(int)getOposErrorCode;
         [Export("getOposErrorCode")]
-        int OposErrorCode { get; }
+        int OposErrorCode ();
 
         // -(int)setConfigCountMode:(int)countMode;
         [Export("setConfigCountMode:")]
@@ -1810,19 +1810,19 @@ namespace PrinterSDK {
 
         // -(int)readCashCount;
         [Export("readCashCount")]
-        int ReadCashCount { get; }
+        int ReadCashCount ();
 
         // -(int)beginDeposit;
         [Export("beginDeposit")]
-        int BeginDeposit { get; }
+        int BeginDeposit ();
 
         // -(int)pauseDeposit;
         [Export("pauseDeposit")]
-        int PauseDeposit { get; }
+        int PauseDeposit ();
 
         // -(int)restartDeposit;
         [Export("restartDeposit")]
-        int RestartDeposit { get; }
+        int RestartDeposit ();
 
         // -(int)endDeposit:(int)config;
         [Export("endDeposit:")]
@@ -1842,7 +1842,7 @@ namespace PrinterSDK {
 
         // -(int)openDrawer;
         [Export("openDrawer")]
-        int OpenDrawer { get; }
+        int OpenDrawer ();
 
         // -(int)sendCommand:(NSData *)data;
         [Export("sendCommand:")]
@@ -1898,11 +1898,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2POSKeyboardStatusInfo : NSObject
@@ -1928,11 +1928,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2POSKeyboardStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2POSKeyboardStatusInfo Status { get; }
+        Epos2POSKeyboardStatusInfo Status ();
 
         // -(void)setKeyPressEventDelegate:(id<Epos2POSKbdKeyPressDelegate>)delegate;
         [Export("setKeyPressEventDelegate:")]
@@ -1944,11 +1944,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2CATStatusInfo : NSObject
@@ -2106,7 +2106,7 @@ namespace PrinterSDK {
 
         // -(long)getTimeout;
         [Export("getTimeout")]
-        nint Timeout { get; }
+        nint Timeout ();
 
         // -(int)setTrainingMode:(int)mode;
         [Export("setTrainingMode:")]
@@ -2114,7 +2114,7 @@ namespace PrinterSDK {
 
         // -(int)getTrainingMode;
         [Export("getTrainingMode")]
-        int TrainingMode { get; }
+        int TrainingMode ();
 
         // -(int)connect:(NSString *)target timeout:(long)timeout;
         [Export("connect:timeout:")]
@@ -2122,15 +2122,15 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2CATStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2CATStatusInfo Status { get; }
+        Epos2CATStatusInfo Status ();
 
         // -(int)getOposErrorCode;
         [Export("getOposErrorCode")]
-        int OposErrorCode { get; }
+        int OposErrorCode ();
 
         // -(int)authorizeSales:(int)service totalAmount:(long)totalAmount sequence:(long)sequence;
         [Export("authorizeSales:totalAmount:sequence:")]
@@ -2186,11 +2186,11 @@ namespace PrinterSDK {
 
         // -(int)clearOutput;
         [Export("clearOutput")]
-        int ClearOutput { get; }
+        int ClearOutput ();
 
         // -(int)scanCode;
         [Export("scanCode")]
-        int ScanCode { get; }
+        int ScanCode ();
 
         // -(int)scanData:(long)command string:(NSString *)string;
         [Export("scanData:string:")]
@@ -2258,11 +2258,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2MSRStatusInfo : NSObject
@@ -2341,11 +2341,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2MSRStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2MSRStatusInfo Status { get; }
+        Epos2MSRStatusInfo Status ();
 
         // -(void)setDataEventDelegate:(id<Epos2MSRDataDelegate>)delegate;
         [Export("setDataEventDelegate:")]
@@ -2357,11 +2357,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2OtherPeripheralStatusInfo : NSObject
@@ -2387,11 +2387,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2OtherPeripheralStatusInfo *)getStatus;
         [Export("getStatus")]
-        Epos2OtherPeripheralStatusInfo Status { get; }
+        Epos2OtherPeripheralStatusInfo Status ();
 
         // -(int)sendData:(NSString *)methodName data:(NSString *)data;
         [Export("sendData:data:")]
@@ -2407,11 +2407,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2GermanyFiscalElementStatusinfo : NSObject
@@ -2437,11 +2437,11 @@ namespace PrinterSDK {
 
         // -(int)disconnect;
         [Export("disconnect")]
-        int Disconnect { get; }
+        int Disconnect ();
 
         // -(Epos2GermanyFiscalElementStatusinfo *)getStatus;
         [Export("getStatus")]
-        Epos2GermanyFiscalElementStatusinfo Status { get; }
+        Epos2GermanyFiscalElementStatusinfo Status ();
 
         // -(int)operate:(NSString *)jsonString timeout:(long)timeout;
         [Export("operate:timeout:")]
@@ -2457,11 +2457,11 @@ namespace PrinterSDK {
 
         // -(NSString *)getAdmin;
         [Export("getAdmin")]
-        string Admin { get; }
+        string Admin ();
 
         // -(NSString *)getLocation;
         [Export("getLocation")]
-        string Location { get; }
+        string Location ();
     }
 
     // @interface Epos2FirmwareInfo : NSObject
@@ -2557,7 +2557,7 @@ namespace PrinterSDK {
         // +(int)stop;
         [Static]
         [Export("stop")]
-        int Stop { get; }
+        int Stop ();
     }
 
     // @interface Epos2Log : NSObject
@@ -2572,7 +2572,7 @@ namespace PrinterSDK {
         // +(NSString *)getSdkVersion;
         [Static]
         [Export("getSdkVersion")]
-        string SdkVersion { get; }
+        string SdkVersion ();
     }
 
     // @interface Epos2BluetoothConnection : NSObject

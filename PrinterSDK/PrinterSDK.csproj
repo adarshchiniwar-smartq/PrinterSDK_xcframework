@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net8.0-ios</TargetFramework>
@@ -33,9 +33,22 @@
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 	</ItemGroup>
-
 	<ItemGroup>
-		<Reference Include="Microsoft.iOS, Version=18.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065" />
+		<Reference Include="Microsoft.iOS">
+			<HintPath>..\..\Microsoft.iOS.dll</HintPath>
+		</Reference>
 	</ItemGroup>
-	
+	<ItemGroup>
+	  <None Remove="Microsoft.iOS.dll" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Microsoft.iOS.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Include="Microsoft.iOS.dll">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	</ItemGroup>
 </Project>
